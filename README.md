@@ -1,4 +1,17 @@
-# buzzline-02-case
+# NW Missouri State University CSIS 44671 Module 2
+
+
+Date: 2025-09-05
+Author: Aaron Gillespie
+GitHub: https://github.com/aarongilly
+
+# Streaming Data with Kafka
+
+This repo contains a basic demonstration of writing records to Kafka and reading them from Kafka, using Python & the `kafka-python-ng` library. 
+
+I wrote this on a Mac, so I can vouch for the MacOS instructions, your milage may vary if you're approaching this code from a Windows or Linux machine. 
+
+## Background 
 
 Streaming data is often too big for any one machine. Apache Kafka is a popular streaming platform that uses publish-subscribe patterns:
 
@@ -7,14 +20,17 @@ Streaming data is often too big for any one machine. Apache Kafka is a popular s
 
 We'll write Python producers and consumers to work with Kafka topics.
 
-Kafka needs space - it's big. 
+# Running the Code
 
-It also comes from the Linux world. We'll use WSL on Windows machines.
+Below are the tasks in sequential order as they were assigned to me. It worked well to simply go through them, so I'll leave their full text below. Conceptually, though, what we're about to do is as follows:
 
-## Copy This Example Project & Rename
+1. Install Kafka (if necessary)
+2. Start Kafka in a terminal
+3. Spin up the Virtual Environment for Python
+4. In a 2nd terminal: start the Producer, which will generate log messages
+5. In a 3rd terminal: start the Consumer, which will read those message
 
-1. Copy/fork this project into your GitHub account and create your own version of this project to run and experiment with.
-2. Name it `buzzline-02-yourname` where yourname is something unique to you.
+> [!info] This is a simple, very small-scale example of writing to Kafka topics and reading from them. This same approach could be scaled up to a cluster of many machines to handle billions of logs.
 
 ## Task 1. Install and Start Kafka (using WSL if Windows)
 
