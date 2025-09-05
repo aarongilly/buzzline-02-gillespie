@@ -25,10 +25,24 @@ We'll write Python producers and consumers to work with Kafka topics.
 Below are the tasks in sequential order as they were assigned to me. It worked well to simply go through them, so I'll leave their full text below. Conceptually, though, what we're about to do is as follows:
 
 1. Install Kafka (if necessary)
-2. Start Kafka in a terminal
+2. Start Kafka in a terminal - see [SETUP_KAFKA](SETUP_KAFKA.md)
 3. Spin up the Virtual Environment for Python
+```terminal
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install --upgrade pip
+python3 -m pip install --upgrade -r requirements.txt
+```
 4. In a 2nd terminal: start the Producer, which will generate log messages
+```terminal
+source .venv/bin/activate
+python3 -m producers.kafka_producer_gillespie
+```
 5. In a 3rd terminal: start the Consumer, which will read those message
+```terminal
+source .venv/bin/activate
+python3 -m consumers.kafka_consumer_gillespie
+```
 
 > [!info] This is a simple, very small-scale example of writing to Kafka topics and reading from them. This same approach could be scaled up to a cluster of many machines to handle billions of logs.
 
